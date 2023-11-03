@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<style>
+    *{margin: 0;}
+    .title{
+        background-color: #A7A7A7;
+        width: 1920px;
+        height: 177px;
+        text-align: center;
+        font-size: 70px;
+        font-family: Noto Sans;
+        line-height: 2.5em;
+        background-size: cover;
+        transition: 0.5s;
+    }    
+    .title:hover{
+        transition: 0.5s;
+        background-color: gray;
+    }    
+    .box1{
+        background-color: #AAB4B8;
+        width: 1920px;
+        height: 606px;
+    }
+    .box2{
+        background-color: #FFFFFF;
+        width: 1920px;
+        height: 502px;
+    }
+    .box3{
+        background-color: #5A5A5A;
+        width: 1920px;
+        height: 1036px;
+    }
+    .box4{
+        background-color: #000000;
+        width: 1920px;
+        height: 349px;
+        position: absolute;
+        top: 1950px;
+        color: #B8B8B8;
+        text-align: center;
+        font-size: 30px;
+        font-family: Noto Sans;
+        line-height: 2em;
+    }
+    .box5{
+        background-color: #2C2C2C;
+        width: 995px;
+        height: 1895px;
+    }
+    .box5-1{
+        width: 995px;
+        height: 600px;
+        text-align: right;
+        font-size: 30px;
+        font-family: Noto Sans;
+        color: #B8B8B8;
+        position: absolute;
+        bottom: -3100px;
+    }
+    .box5-2{
+        background-color: #FFFFFF;
+        width: 918px;
+        height: 447px;
+        position: absolute;
+        left: 1010px;
+        bottom: -2250px;
+        color: #3B3B3B;
+        font-size: 30px;
+        font-family: Noto Sans;
+    }
+    .box6{
+        background-color: #FFFFFF;
+        width: 1920px;
+        height: 80px;
+        position: absolute;
+        bottom: -4600px;
+        text-align: center;
+        z-index: 1;
+        font-size: 33px;
+        color: #3B3B3B;
+    }
+    .box7{
+        background-color: #848484;
+        width: 1920px;
+        height: 77px;
+        position: absolute;
+        top: 6000px;
+        line-height: 2.5em;
+        font-size: 30px;
+        font-family: Noto Sans
+    }
+    .box8{
+        background-color: #FFFFFF;
+        width: 1920px;
+        height: 254px;
+        position: absolute;
+        bottom: -5000px;
+        text-align: center;
+        color: #707070;
+        font-size: 35px;
+        font-family: Noto Sans;
+    }
+    .bor1{
+        border: 3px solid black;
+        position: absolute;
+        width: 486px;
+        left: 250px;
+        bottom: 820px;
+    }
+    .bor2{
+        border: 3px solid black;
+        position: absolute;
+        width: 486px;
+        left: 1180px;
+        bottom: 820px;
+    }
+    .dummy1{
+        width: 861px;
+        height: 547px;
+        position: absolute;
+        bottom: 160px;
+        left: 50px;
+        transition: 0.5s;
+        box-shadow: 0px 0px 0px #2C2C2C;
+    }
+    .dummy1:hover{
+        transition: 0.5s;
+        box-shadow: 3px 10px 10px #2C2C2C;
+    }
+    .dummy2{
+        width: 661px;
+        height: 440px;
+        position: absolute;
+        left: 1070px;
+        bottom: -330px;
+        transition: 0.5s;
+        box-shadow: 0px 0px 0px #2C2C2C;
+    }
+    .dummy2:hover{
+        transition: 0.5s;
+        box-shadow: 3px 10px 10px #2C2C2C;
+    }
+    .dummy3{
+        width: 728px;
+        height: 503px;
+        position: absolute;
+        left: 900px;
+        bottom: -930px;
+        transition: 0.5s;
+        box-shadow: 0px 0px 0px #000000;
+    }
+    .dummy3:hover{
+        transition: 0.5s;
+        box-shadow: 3px 10px 10px #000000;
+    }
+    .dummy4{
+        width: 893px;
+        height: 503px;
+        position: absolute;
+        left: 90px;
+        bottom: -930px;
+        transition: 0.5s;
+        box-shadow: 0px 0px 0px #000000;
+    }
+    .dummy4:hover{
+        box-shadow: 3px 10px 10px;
+        transition: 0.5s;
+    }
+    .dummy5{
+        background-color: gray;
+        width: 844px;
+        height: 474px;
+        position: absolute;
+        left: 70px;
+        bottom: -2200px;
+    }
+    .dummy6{
+        background-color: gray;
+        width: 773px;
+        height: 1031px;
+        position: absolute;
+        left: 1080px;
+        bottom: -3400px;
+    }
+    .dummy7{
+        background-color: gray;
+        width: 1758px;
+        height: 1172px;
+        position: absolute;
+        left: 80px;
+        bottom: -4590px;
+    }
+    .textbox1{
+        background-color: #D4DDE3;
+        width: 918px;
+        height: 397px;
+        position: absolute;
+        left: 950px;
+        bottom: 200px;
+        font-size: 35px;
+    }
+    .textbox2{
+        background-color: #D4DDE3;
+        width: 935px;
+        height: 290px;
+        position: absolute;
+        left: 30px;
+        bottom: -320px;
+        font-size: 30px;
+        text-align: right;
+    }
+    .text_title1{
+        background-color:#798690;
+        width: 506px;
+        height: 83px;
+        position: absolute;
+        left: 460px;
+        top: 810px;
+        text-align: right;
+        font-size: 50px;
+        line-height: 1.5em;
+        color: #3B3B3B;
+    }
+    .text_title2{
+        background-color:#798690;
+        width: 550px;
+        height: 83px;
+        position: absolute;
+        left: 950px;
+        top: 205px;
+        font-size: 42px;
+        line-height: 2em;
+        color: #3B3B3B;
+    }
+    .text_title3{
+        background-color:#798690;
+        width: 661px;
+        height: 68px;
+        position: absolute;
+        left: 700px;
+        top: 1860px;
+        text-align: center;
+        font-size: 50px;
+        color: #3B3B3B;
+    }
+    .text_title4{
+        background-color:#798690;
+        width: 682px;
+        height: 68px;
+        position: absolute;
+        left: 1020px;
+        top: 2600px;
+        font-size: 50px;
+        color: #3B3B3B;
+    }
+    .text_title5{
+        background-color:#798690;
+        width: 448px;
+        height: 68px;
+        position: absolute;
+        left: 480px;
+        top: 3300px;
+        text-align: right;
+        font-size: 50px;
+        color: #3B3B3B;
+    }
+    .line1{
+        width: 1826px;
+        height: 630px;
+        border: 3px solid #FFFFFF;
+        position: absolute;
+        bottom: -1020px;
+        left: 40px;
+    }
+    .line2{
+        width: 914px;
+        height: 555px;
+        border: 3px solid #E3CB45;
+        position: absolute;
+        bottom: -2243px;
+        left: 40px;
+    }
+</style>
+<body>
+    <div class="title">BTS Gallery</div>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4">올해는 사실상 ‘방탄소년단의 해’였다고 해도 과한 말이 아니다. 최근 그들이 세운 ‘최초’ ‘최고’ ‘최단 기간’ 기록은 실로 헤아리기 어려울
+        정도다.이들이 최근 이뤄낸 각종 기록 가운데 대표적인 성과는 미국 빌보드 싱글차트(‘핫100’) 1위다. 지난 9월 영어 노래인 ‘다이너마이트’로
+        1위에 오르더니, 지난달 30일(현지시각)에는 한국어 노래인 ‘라이프 고즈 온’으로도 1위에 올랐다. 이제 이들에게는 어떤 언어로 
+       노래하느냐는 크게 중요한 문제는 아닌 듯하다다. ‘핫100’은 팝의 본고장인 미국에서 가장 인기 있는 ‘노래’를 보여주는 지표다. 이 차트에서 한국어로 된 곡이 1위에 오른 것은 빌보드 차트 62년 역사상 이번이 처음이다. 비영어권 곡이 차트에 
+       데뷔하자마자 1위를 한 것도 ‘라이프 고즈 온’이 유일하다.
+    </div>
+    <div class="box5"></div>
+    <div class="box5-1">미국 시사주간지 <타임>의 평가도 크게 다르지 않다.<br>
+        <타임>은 10일(현지시각) 방탄소년단을‘올해의 연예인’으로 선정하며,
+        그 이유를 이렇게 들었다. “그들은 고통과 냉소가 가득한 
+        시기에 친절, 연결, 포용이라는 메시지에<br> 충실했고,
+        팬덤은 이들의 긍정 메시지를 세계로 전파했다."</div>
+    <div class="box5-2">방탄소년단은 새 앨범과 수록곡으로 각각 빌보드 양대 메인 차트를<br> 동시에 석권하는 진기록도 세웠다.
+        방탄소년단은 어떻게 이런 성과를 낼 수 있었을까?
+        독보적 음악과 퍼포먼스, 팬덤 ‘아미’의 힘 등 다양한 요인이
+        있겠지만, 그들이 세상에 전한 ‘위로’와 ‘희망’을 꼽고 싶다.
+        <br>‘다이너마이트’와 ‘라이프 고즈 온’은 모두 코로나19 시대를 사는
+        <br>이들에게 전하는 위로의 메시지를 담은 곡이다. ‘다이너마이트’가
+        밝고 경쾌한 톤의 ‘힐링송’이라면, ‘라이프 고즈 온’은 서정적인 
+        분위기로 <br>‘그럼에도 삶은 계속된다’는 메시지를 전한다.</div>
+    <div class="box6">미국 빌보드 싱글·앨범·아티스트 차트에서 정상에 오른 방탄소년단(BTS).
+        그룹으로 이들 세 부문에서 동시에 1위를 한 가수는<br> 방탄소년단이 유일하다.<br>
+        사진 빅히트엔터테인먼트 제공
+        </div>
+    <div class="box7">문화부 대중문화팀 김경욱 기자 dash@hani.co.kr</div>
+    <div class="box8"> 물론 한편에서는 방탄소년단이 그래미의 벽을 넘기는 쉽지 않을 거라는 전망도 나온다. 
+        변화에 둔감하고 나이 든 백인 남성 <br>중심의 보수적인  시상식이란 이유다. 다만, 한 가지 확실한 건 있다. 
+        그래미는 그래미일 뿐이라는 사실이다. 그래미 수상 <br>여부와 관계없이,
+        그들의 노래로 위로받은 이들에게 방탄소년단은 이미 ‘최고의 스타’니까.
+    </div>
+
+    <div class="bor1"></div>
+    <div class="bor2"></div>
+
+    <div class="dummy1"><img src="image/BTS_01.png" alt=""></div>
+    <div class="dummy2"><img src="image/BTS_05.png" alt=""></div>
+    <div class="dummy3"><img src="image/BTS_04.png" alt=""></div>
+    <div class="dummy4"><img src="image/BTS_06.png" alt=""></div>
+    <div class="dummy5"><img src="image/BTS_03.png" alt=""></div>
+    <div class="dummy6"><img src="image/BTS_00.png" alt=""></div>
+    <div class="dummy7"><img src="image/BTS_07.png" alt=""></div>
+
+    <div class="textbox1">
+        <br>
+        <br>
+        세월호 참사 6주기를 앞두고 유족들과 인터뷰를 나눴다.<br>
+        그러던중 한 사연이 들려왔다.2014년 젊은 친구들이
+        예의를 갖춰 분향하고, 유족들을 위로하고 돌아갔다.<br>
+        가족협의회 앞으로 1억원을 기부하기도 했다.<br> 
+        유족을 찾은 이들은 아이돌 그룹, 방탄소년단(BTS) 이었다. </div>
+    <div class="textbox2">정권 차원의 문화계 블랙리스트가 작성되고, 각종 불이익이 가해졌던 
+        <br>상황에서도 아랑곳하지 않고 소신 있게 행동한 그들이 유족들로선 
+        <br>“참으로 고마웠다”고 했다.<br> 유족들이 그날 이후로 “그들의 미래를 위해 
+        간절히 기도하고, <br>응원”한 이유있다. 비통에 잠긴 자신들을 찾아와 
+        마음을 다해 <br>위로해준 이들이 다른 누구보다 사랑받는 가수가 되길 
+        바란 것은 <br>어쩌면 당연한 일이었을 것이다. </div>
+
+    <div class="text_title1">소신있는 그들의 행동</div>
+    <div class="text_title2">BTS, 세월호 참사를 위로하다</div>
+    <div class="text_title3">방탄소년단의 해</div>
+    <div class="text_title4">그들이 노래하는 위로와 희망</div>
+    <div class="text_title5">타임지 선정 BTS</div>
+
+    <div class="line1"></div>
+    <div class="line2"></div>
+</body>
+</html>
